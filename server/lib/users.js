@@ -18,6 +18,8 @@ async function randomID(counter = 0) {
 
 exports.create = async (socket) => {
   const id = await randomID();
+  console.log("Genereting random id: "+id);
+
   if (id) {
     users[id] = socket;
   }
